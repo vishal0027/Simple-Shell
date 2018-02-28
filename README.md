@@ -40,4 +40,4 @@ in a separate process. Start by reading the following manual pages: fork, execvp
 kill, malloc, open, close, dup, dup2, pipe, strchr, chdir.
   
   
-![alt text](screenshots/diag.png "Description goes here")
+![alt text](screenshots/Diag.png "Description goes here")
