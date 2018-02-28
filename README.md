@@ -4,23 +4,28 @@ A shell is a program that users use to communicate with non user friendly machin
 The shells that are comonly used on Unix are sophisticated interactive programs with several
 facilities for customization and speed up. In this assignment you will write a simplified
 shell, loosely modeled after sh. The BNF of the language is:
-command: list NEWLINE
+command: 
+        list NEWLINE
         | list ’<’ <FNAME> <NEWLINE>
         | list ’>’ <FNAME> <NEWLINE>
         | list ’<’ <FNAME> ’>’ <FNAME> <NEWLINE>
         | list ’>’ <FNAME> ’<’ <FNAME> <NEWLINE>
 ;
+        
 list: expr ’;’ list
         | expr ’&’ list
         | expr
 ;
+        
 expr: pipe AND expr
         | pipe OR expr
         | pipe
 ;
+        
 pipe: simple ’|’ pipe
         | simple
 ;
+       
 simple: cd <FNAME>
         | ’exit’
         | fnamelist
